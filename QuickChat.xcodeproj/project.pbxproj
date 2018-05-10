@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81B20A3C9E4B09D2C64A1A72 /* Pods_QuickChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB10CA8FCBB439483FDB8F6B /* Pods_QuickChat.framework */; };
 		C674183720A4238F00A0E247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674183620A4238F00A0E247 /* AppDelegate.swift */; };
 		C674183920A4238F00A0E247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674183820A4238F00A0E247 /* ViewController.swift */; };
 		C674183C20A4238F00A0E247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C674183A20A4238F00A0E247 /* Main.storyboard */; };
 		C674183E20A4239500A0E247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C674183D20A4239500A0E247 /* Assets.xcassets */; };
 		C674184120A4239500A0E247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C674183F20A4239500A0E247 /* LaunchScreen.storyboard */; };
+		C674184D20A42ECD00A0E247 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C674184C20A42ECD00A0E247 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C40621B8464D73B9DA2F024F /* Pods-QuickChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickChat/Pods-QuickChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C674183320A4238F00A0E247 /* QuickChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C674183620A4238F00A0E247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C674183820A4238F00A0E247 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,11 @@
 		C674183D20A4239500A0E247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C674184020A4239500A0E247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C674184220A4239500A0E247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C674184A20A42ECC00A0E247 /* QuickChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		C674184B20A42ECD00A0E247 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C674184C20A42ECD00A0E247 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		DB10CA8FCBB439483FDB8F6B /* Pods_QuickChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB01C507FC0270E2D981BD6C /* Pods-QuickChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickChat/Pods-QuickChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B20A3C9E4B09D2C64A1A72 /* Pods_QuickChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0C7938737A41B8B79A12AC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C40621B8464D73B9DA2F024F /* Pods-QuickChat.debug.xcconfig */,
+				EB01C507FC0270E2D981BD6C /* Pods-QuickChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C674182A20A4238F00A0E247 = {
 			isa = PBXGroup;
 			children = (
+				C674184920A42E5C00A0E247 /* SupportingFiles */,
 				C674183520A4238F00A0E247 /* QuickChat */,
 				C674183420A4238F00A0E247 /* Products */,
+				B0C7938737A41B8B79A12AC2 /* Pods */,
+				FA13362E53F428396F2B472B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +85,24 @@
 			path = QuickChat;
 			sourceTree = "<group>";
 		};
+		C674184920A42E5C00A0E247 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C674184B20A42ECD00A0E247 /* SWRevealViewController.h */,
+				C674184C20A42ECD00A0E247 /* SWRevealViewController.m */,
+				C674184A20A42ECC00A0E247 /* QuickChat-Bridging-Header.h */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FA13362E53F428396F2B472B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB10CA8FCBB439483FDB8F6B /* Pods_QuickChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C674184520A4239500A0E247 /* Build configuration list for PBXNativeTarget "QuickChat" */;
 			buildPhases = (
+				39C994D6CC49D33B3D58FA1C /* [CP] Check Pods Manifest.lock */,
 				C674182F20A4238F00A0E247 /* Sources */,
 				C674183020A4238F00A0E247 /* Frameworks */,
 				C674183120A4238F00A0E247 /* Resources */,
+				2BA12DE71989483913E54BB5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +137,7 @@
 				TargetAttributes = {
 					C674183220A4238F00A0E247 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -130,6 +172,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2BA12DE71989483913E54BB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuickChat/Pods-QuickChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickChat/Pods-QuickChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39C994D6CC49D33B3D58FA1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C674182F20A4238F00A0E247 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +224,7 @@
 			files = (
 				C674183920A4238F00A0E247 /* ViewController.swift in Sources */,
 				C674183720A4238F00A0E247 /* AppDelegate.swift in Sources */,
+				C674184D20A42ECD00A0E247 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,8 +366,10 @@
 		};
 		C674184620A4239500A0E247 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C40621B8464D73B9DA2F024F /* Pods-QuickChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = QuickChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -288,6 +378,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinicorp.QuickChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/QuickChat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,8 +387,10 @@
 		};
 		C674184720A4239500A0E247 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB01C507FC0270E2D981BD6C /* Pods-QuickChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = QuickChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -305,6 +399,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinicorp.QuickChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/QuickChat-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
