@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		81B20A3C9E4B09D2C64A1A72 /* Pods_QuickChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB10CA8FCBB439483FDB8F6B /* Pods_QuickChat.framework */; };
 		C674183720A4238F00A0E247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674183620A4238F00A0E247 /* AppDelegate.swift */; };
-		C674183920A4238F00A0E247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674183820A4238F00A0E247 /* ViewController.swift */; };
 		C674183C20A4238F00A0E247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C674183A20A4238F00A0E247 /* Main.storyboard */; };
 		C674183E20A4239500A0E247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C674183D20A4239500A0E247 /* Assets.xcassets */; };
 		C674184120A4239500A0E247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C674183F20A4239500A0E247 /* LaunchScreen.storyboard */; };
 		C674184D20A42ECD00A0E247 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C674184C20A42ECD00A0E247 /* SWRevealViewController.m */; };
+		C674185220A4433D00A0E247 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674185120A4433D00A0E247 /* ChatVC.swift */; };
+		C674185420A4434900A0E247 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674185320A4434900A0E247 /* ChannelVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C40621B8464D73B9DA2F024F /* Pods-QuickChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickChat/Pods-QuickChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C674183320A4238F00A0E247 /* QuickChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C674183620A4238F00A0E247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C674183820A4238F00A0E247 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C674183B20A4238F00A0E247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C674183D20A4239500A0E247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C674184020A4239500A0E247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +28,8 @@
 		C674184A20A42ECC00A0E247 /* QuickChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickChat-Bridging-Header.h"; sourceTree = "<group>"; };
 		C674184B20A42ECD00A0E247 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		C674184C20A42ECD00A0E247 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		C674185120A4433D00A0E247 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		C674185320A4434900A0E247 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		DB10CA8FCBB439483FDB8F6B /* Pods_QuickChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB01C507FC0270E2D981BD6C /* Pods-QuickChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickChat/Pods-QuickChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,7 +58,6 @@
 		C674182A20A4238F00A0E247 = {
 			isa = PBXGroup;
 			children = (
-				C674184920A42E5C00A0E247 /* SupportingFiles */,
 				C674183520A4238F00A0E247 /* QuickChat */,
 				C674183420A4238F00A0E247 /* Products */,
 				B0C7938737A41B8B79A12AC2 /* Pods */,
@@ -75,8 +76,11 @@
 		C674183520A4238F00A0E247 /* QuickChat */ = {
 			isa = PBXGroup;
 			children = (
+				C674185020A4416700A0E247 /* Views */,
+				C674184F20A4416000A0E247 /* Models */,
+				C674184E20A4411800A0E247 /* Controllers */,
+				C674184920A42E5C00A0E247 /* SupportingFiles */,
 				C674183620A4238F00A0E247 /* AppDelegate.swift */,
-				C674183820A4238F00A0E247 /* ViewController.swift */,
 				C674183A20A4238F00A0E247 /* Main.storyboard */,
 				C674183D20A4239500A0E247 /* Assets.xcassets */,
 				C674183F20A4239500A0E247 /* LaunchScreen.storyboard */,
@@ -93,6 +97,29 @@
 				C674184A20A42ECC00A0E247 /* QuickChat-Bridging-Header.h */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C674184E20A4411800A0E247 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C674185120A4433D00A0E247 /* ChatVC.swift */,
+				C674185320A4434900A0E247 /* ChannelVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C674184F20A4416000A0E247 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C674185020A4416700A0E247 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FA13362E53F428396F2B472B /* Frameworks */ = {
@@ -222,7 +249,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C674183920A4238F00A0E247 /* ViewController.swift in Sources */,
+				C674185420A4434900A0E247 /* ChannelVC.swift in Sources */,
+				C674185220A4433D00A0E247 /* ChatVC.swift in Sources */,
 				C674183720A4238F00A0E247 /* AppDelegate.swift in Sources */,
 				C674184D20A42ECD00A0E247 /* SWRevealViewController.m in Sources */,
 			);
@@ -378,7 +406,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinicorp.QuickChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/QuickChat-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "QuickChat/SupportingFiles/QuickChat-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -399,7 +427,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vinicorp.QuickChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/QuickChat-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "QuickChat/SupportingFiles/QuickChat-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
