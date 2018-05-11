@@ -85,7 +85,7 @@
         <scene sceneID="kIa-R4-epY">
             <objects>
                 <viewController id="dpo-Ji-rKw" customClass="ChannelVC" customModule="QuickChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aCj-Kz-Oq8">
+                    <view key="view" contentMode="scaleToFill" id="aCj-Kz-Oq8" customClass="GradientView" customModule="QuickChat" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
