@@ -16,6 +16,7 @@ class ChatVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         btnMenu.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+        self.revealViewController().rearViewRevealWidth = self.view.frame.width - btnMenu.frame.width - btnMenu.frame.minX * 2
         
     }
 
