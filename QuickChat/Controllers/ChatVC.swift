@@ -18,7 +18,6 @@ class ChatVC: UIViewController {
         self.revealViewController()?.isLeftPresentViewOnTop = false
         self.revealViewController()?.setLeftViewRevealWidth(self.view.frame.width - (btnMenu.frame.width + btnMenu.frame.minX * 2) , animated: true)
         btnMenu.addTarget(self.revealViewController(), action: #selector(PBRevealViewController.revealLeftView), for: .touchUpInside)
-        
     }
 
 }
