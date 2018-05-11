@@ -9,7 +9,7 @@ target 'QuickChat' do
 
   # Pods for QuickChat
   pod 'Alamofire'
-  pod 'SwiftyJSON'
   pod 'Socket.IO-Client-Swift'
+  pod 'SwiftyJSON'
 
 end
