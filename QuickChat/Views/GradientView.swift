@@ -34,7 +34,7 @@ class GradientView: UIView {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = []
         for i in 0...255 {
-            let pointColor: CGColor = UIColor(hue: CGFloat(i)/subdivisions, saturation: 1, brightness: 1, alpha: 1).cgColor
+            let pointColor: CGColor = UIColor(hue: CGFloat(256-i)/subdivisions, saturation: 1, brightness: 1, alpha: 1).cgColor
             gradientLayer.colors?.append(pointColor)
         }
 //        gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
