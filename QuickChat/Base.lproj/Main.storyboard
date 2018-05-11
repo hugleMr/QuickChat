@@ -13,7 +13,7 @@
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PBRevealViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,8 +21,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="dpo-Ji-rKw" kind="custom" identifier="pb_left" customClass="PBRevealViewControllerSegueSetController" id="bKy-Ah-6S4"/>
-                        <segue destination="MsT-8w-DZE" kind="custom" identifier="pb_main" customClass="PBRevealViewControllerSegueSetController" id="Tdw-70-jH5"/>
+                        <segue destination="dpo-Ji-rKw" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="bKy-Ah-6S4"/>
+                        <segue destination="MsT-8w-DZE" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="Tdw-70-jH5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
