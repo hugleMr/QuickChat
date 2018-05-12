@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05E5C15020A63A4D005A3F70 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5C14F20A63A4D005A3F70 /* LoginVC.swift */; };
 		81B20A3C9E4B09D2C64A1A72 /* Pods_QuickChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB10CA8FCBB439483FDB8F6B /* Pods_QuickChat.framework */; };
 		C674183720A4238F00A0E247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674183620A4238F00A0E247 /* AppDelegate.swift */; };
 		C674183C20A4238F00A0E247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C674183A20A4238F00A0E247 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05E5C14F20A63A4D005A3F70 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C40621B8464D73B9DA2F024F /* Pods-QuickChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickChat/Pods-QuickChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C674183320A4238F00A0E247 /* QuickChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C674183620A4238F00A0E247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				C674185120A4433D00A0E247 /* ChatVC.swift */,
 				C674185320A4434900A0E247 /* ChannelVC.swift */,
 				C6DABD3420A53EFA00E164EB /* PBRevealViewController.swift */,
+				05E5C14F20A63A4D005A3F70 /* LoginVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				C674185420A4434900A0E247 /* ChannelVC.swift in Sources */,
 				C69CA56720A59DA00060FAA5 /* LoginTextField.swift in Sources */,
+				05E5C15020A63A4D005A3F70 /* LoginVC.swift in Sources */,
 				C674185220A4433D00A0E247 /* ChatVC.swift in Sources */,
 				C6DABD3720A54C5500E164EB /* GradientView.swift in Sources */,
 				C674183720A4238F00A0E247 /* AppDelegate.swift in Sources */,
