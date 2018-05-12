@@ -10,6 +10,7 @@ import UIKit
 
 @IBDesignable
 class GradientView: UIView {
+    
     @objc enum DegreeUnit: Int {
         case degree = 0, radian, gradian
     }
@@ -20,7 +21,7 @@ class GradientView: UIView {
         }
     }
     
-    @IBInspectable var resolution: UInt = 256 {
+    @IBInspectable var resolution: UInt = 512 {
         didSet {
             self.setNeedsLayout()
         }
@@ -59,6 +60,7 @@ class GradientView: UIView {
             gradientLayer.colors?.append(pointColor)
             }
 //        gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
+//        angle *= Double.pi
         var x = 0.5 * cos(angle)
         var y = 0.5 * sin(angle)
         if x != 0 && abs(tan(angle)) <= 1 {
@@ -72,11 +74,5 @@ class GradientView: UIView {
         gradientLayer.endPoint = CGPoint(x: 1 - x, y: 1 - y)
         gradientLayer.frame = self.bounds
         self.layer.insertSublayer(gradientLayer, at: 0)
-    }
-}
-
-extension FloatingPoint {
-    func sign() -> Double {
-        return (self < Self(0) ? -1 : 1)
     }
 }
