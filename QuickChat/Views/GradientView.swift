@@ -64,10 +64,10 @@ class GradientView: UIView {
         var x = 0.5 * cos(angle)
         var y = 0.5 * sin(angle)
         if x != 0 && abs(tan(angle)) <= 1 {
+            y = 0.5 * ( 1 + y / x)
             x = x < 0 ? 0 : 1
-            y = 0.5 * ( 1 + tan(angle))
         } else {
-            x = 0.5 * (1 + 1 / tan(angle))
+            x = 0.5 * (1 + x / y)
             y = y < 0 ? 0 : 1
         }
         gradientLayer.startPoint = CGPoint(x: x, y: y)
