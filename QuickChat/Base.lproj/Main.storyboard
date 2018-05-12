@@ -65,6 +65,17 @@
                                     <constraint firstItem="B37-2a-3Is" firstAttribute="centerY" secondItem="bEp-lj-9O3" secondAttribute="centerY" id="dRo-0r-idD"/>
                                     <constraint firstItem="bEp-lj-9O3" firstAttribute="leading" secondItem="Hui-Zd-vsJ" secondAttribute="leading" constant="12" id="oWp-Ho-jLF"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <real key="value" value="15.199999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="repeated">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="resolution">
+                                        <integer key="value" value="512"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -203,7 +214,7 @@
                                 <integer key="value" value="0"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="angle">
-                                <real key="value" value="1.5700000000000001"/>
+                                <real key="value" value="1.75"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
