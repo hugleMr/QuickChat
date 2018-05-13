@@ -25,8 +25,6 @@ class LoginVC: UIViewController {
         performSegue(withIdentifier: TO_SIGN_UP, sender: nil)
     }
     
-    @IBAction func unwindFromSignUpVC(unwindSegue: UIStoryboardSegue) {
-        
-    }
+    @IBAction func unwindToLoginVC(unwindSegue: UIStoryboardSegue){}
 
 }

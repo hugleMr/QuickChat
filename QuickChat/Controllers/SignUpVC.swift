@@ -16,9 +16,4 @@ class SignUpVC: UIViewController {
         let tapGestureBackground = UITapGestureRecognizer(target: self, action: #selector(self.backgroundTapped(_:)))
         self.view.addGestureRecognizer(tapGestureBackground)
     }
-
-    @IBAction func btnClosePressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
-
 }
