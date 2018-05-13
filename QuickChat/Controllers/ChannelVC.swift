@@ -16,7 +16,11 @@ class ChannelVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func loginButtonPressed(_ sender: Any) {
+    @IBAction func btnLoginPressed(_ sender: Any) {
         performSegue(withIdentifier: TO_LOGIN, sender: nil)
+    }
+    
+    @IBAction func unwindFromLoginVC(unwindSegue: UIStoryboardSegue) {
+        
     }
 }

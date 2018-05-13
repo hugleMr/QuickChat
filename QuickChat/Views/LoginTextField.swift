@@ -13,7 +13,7 @@ class LoginTextField: UITextField {
 
     fileprivate func customizedView() {
         let border = CALayer()
-        let width = CGFloat(3.0)
+        let width = CGFloat(2.0)
         border.borderColor = #colorLiteral(red: 0.3568627451, green: 0.6235294118, blue: 0.7960784314, alpha: 1)
         border.borderWidth = width
         border.cornerRadius = 5.0

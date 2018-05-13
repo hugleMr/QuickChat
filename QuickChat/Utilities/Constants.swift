@@ -9,4 +9,5 @@
 import Foundation
 
 let TO_LOGIN = "toLoginSegue"
+let TO_SIGN_UP = "toSignUpSegue"
 let CHANNEL_CELL = "channelCell"
