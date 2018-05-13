@@ -60,10 +60,10 @@ class GradientView: UIView {
             gradientLayer.colors?.append(pointColor)
             }
 //        gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
-//        angle *= Double.pi
-        var x = 0.5 * cos(angle)
-        var y = 0.5 * sin(angle)
-        if x != 0 && abs(tan(angle)) <= 1 {
+        let angleGrad = angle * Double.pi
+        var x = 0.5 * cos(angleGrad)
+        var y = 0.5 * sin(angleGrad)
+        if x != 0 && abs(tan(angleGrad)) <= 1 {
             y = 0.5 * ( 1 + y / x)
             x = x < 0 ? 0 : 1
         } else {
