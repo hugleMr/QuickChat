@@ -31,13 +31,13 @@ class LoginVC: UIViewController {
         guard let pass = txtPassword.text, txtPassword.text != "" else {
             return
         }
-        AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
+        AuthService.instance.loginUser(user: User(email, pass)) { (success) in
             if success {
                 print(AuthService.instance.authToken)
             } else {
                 print("Login failed!")
             }
-        })
+        }
     }
     
     @IBAction func btnSignUpPressed(_ sender: UIButton) {
