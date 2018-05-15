@@ -11,5 +11,5 @@ target 'QuickChat' do
   pod 'Alamofire'
   pod 'Socket.IO-Client-Swift'
   pod 'SwiftyJSON'
-
+  pod 'Toast-Swift'
 end
