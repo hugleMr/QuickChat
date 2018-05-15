@@ -10,6 +10,9 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var txtUsername: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,6 +22,22 @@ class LoginVC: UIViewController {
 
     @IBAction func btnClosePressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func btnLoginPressed(_ sender: UIButton) {
+        guard let email = txtUsername.text, txtUsername.text != "" else {
+            return
+        }
+        guard let pass = txtPassword.text, txtPassword.text != "" else {
+            return
+        }
+        AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
+            if success {
+                print(AuthService.instance.authToken)
+            } else {
+                print("Login failed!")
+            }
+        })
     }
     
     @IBAction func btnSignUpPressed(_ sender: UIButton) {
