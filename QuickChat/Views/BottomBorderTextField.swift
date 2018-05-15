@@ -1,5 +1,5 @@
 //
-//  LoginTextField.swift
+//  BottomBorderTextField.swift
 //  QuickChat
 //
 //  Created by thanhbh on 5/11/18.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class LoginTextField: UITextField {
+class BottomBorderTextField: UITextField {
 
     fileprivate func customizedView() {
         let border = CALayer()
