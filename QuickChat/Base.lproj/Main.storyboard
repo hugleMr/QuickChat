@@ -374,6 +374,9 @@
                                 <state key="normal" title="CREATE ACCOUNT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnCreateAccountPressed:" destination="tl9-TX-rvE" eventType="touchUpInside" id="Jd1-YS-DPk"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb0-Hl-Vbh">
                                 <rect key="frame" x="81.5" y="60" width="212.5" height="34.5"/>
@@ -434,6 +437,7 @@
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnChooseAvatarPressed:" destination="tl9-TX-rvE" eventType="touchUpInside" id="kKd-N7-DMs"/>
                                     <action selector="btnSignUpPressed:" destination="AtI-iR-Scs" eventType="touchUpInside" id="byZ-yD-6Wl"/>
                                 </connections>
                             </button>
@@ -450,6 +454,7 @@
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnGenerateBackground:" destination="tl9-TX-rvE" eventType="touchUpInside" id="8xn-Ww-fd8"/>
                                     <action selector="btnSignUpPressed:" destination="AtI-iR-Scs" eventType="touchUpInside" id="7Ah-0Y-czp"/>
                                 </connections>
                             </button>
@@ -481,6 +486,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UUS-s9-OpP"/>
                     </view>
+                    <connections>
+                        <outlet property="imgUser" destination="P6t-mD-mHO" id="5o0-7y-8wN"/>
+                        <outlet property="txtEmail" destination="MYh-Xl-Iy8" id="1an-HN-38j"/>
+                        <outlet property="txtPassword" destination="qsW-l6-CGi" id="h7d-qE-T4Z"/>
+                        <outlet property="txtRePass" destination="RSL-I7-BgB" id="Ej0-Vf-zIc"/>
+                        <outlet property="txtUsername" destination="PLP-mn-8pT" id="Fp4-Dn-mB9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HV6-C1-e5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="l1b-G6-iPY" userLabel="Exit" sceneMemberID="exit"/>
