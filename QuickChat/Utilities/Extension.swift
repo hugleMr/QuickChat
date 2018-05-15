@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  Extension.swift
 //  QuickChat
 //
 //  Created by Bùi Huy Thanh on 5/13/18.

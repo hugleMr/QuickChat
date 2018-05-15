@@ -9,7 +9,8 @@ target 'QuickChat' do
 
   # Pods for QuickChat
   pod 'Alamofire'
+  pod 'PBRevealViewController/Swift'
   pod 'Socket.IO-Client-Swift'
   pod 'SwiftyJSON'
-
+  pod 'Toast-Swift'
 end
