@@ -40,7 +40,9 @@ class SignUpVC: UIViewController {
         }
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
-                self.view.makeToast("User has been registered!")
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                print("User cannot be created!")
             }
         }
     }
