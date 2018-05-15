@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PBRevealViewController
 
 class ChannelVC: UIViewController {
 
