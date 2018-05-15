@@ -38,7 +38,7 @@ class SignUpVC: UIViewController {
         if rePass != pass {
             return
         }
-        AuthService.instance.registerUser(email: email, password: pass) { (success) in
+        AuthService.instance.registerUser(user: User(email, pass)) { (success) in
             if success {
                 self.dismiss(animated: true, completion: nil)
             } else {
