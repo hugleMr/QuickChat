@@ -42,11 +42,11 @@ class AuthService {
         }
     }
     
-    func registerUser(email: String, password: String, completion: @escaping CompletionHandle) {
-        let lowerCaseEmail = email.lowercased()
+    func registerUser(user: User, completion: @escaping CompletionHandle) {
+        let lowerCaseEmail = user.email.lowercased()
         let body: [String: Any] = [
             "email": lowerCaseEmail,
-            "password": password
+            "password": user.password
         ]
         Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER_API).responseString {
             (response) in
@@ -59,11 +59,11 @@ class AuthService {
         }
     }
     
-    func loginUser(email: String, password: String, completion: @escaping CompletionHandle) {
-        let lowerCaseEmail = email.lowercased()
+    func loginUser(user: User, completion: @escaping CompletionHandle) {
+        let lowerCaseEmail = user.email.lowercased()
         let body: [String: Any] = [
             "email": lowerCaseEmail,
-            "password": password
+            "password": user.password
         ]
         Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER_API).responseJSON { (response) in
             if response.result.error == nil {
