@@ -8,6 +8,20 @@
 
 import Foundation
 
+typealias CompletionHandle = (_ success: Bool) -> ()
+
+// Segues
 let TO_LOGIN = "toLoginSegue"
 let TO_SIGN_UP = "toSignUpSegue"
 let CHANNEL_CELL = "channelCell"
+
+// User defaults
+let TOKEN_KEY = "token"
+let LOGGED_IN_KEY = "loggedIn"
+let USER_EMAIL = "userEmail"
+
+// API URL
+// let BASE_URL = "https://chattychatchat.herokuapp.com/v1/"
+let BASE_URL = "http://localhost:3005/v1/"
+let REGISTER_URL = "\(BASE_URL)account/register"
+let LOGIN_URL = "\(BASE_URL)account/login"
