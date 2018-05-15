@@ -51,7 +51,7 @@
                                         <state key="normal" image="smackBurger"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B37-2a-3Is">
-                                        <rect key="frame" x="145" y="46.5" width="85" height="21"/>
+                                        <rect key="frame" x="145.5" y="46.5" width="85" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -156,7 +156,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="channelCell" rowHeight="47" id="hVs-72-P0x">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="channelCell" rowHeight="47" id="hVs-72-P0x">
                                         <rect key="frame" x="0.0" y="28" width="375" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hVs-72-P0x" id="caM-fa-dbT">
@@ -271,20 +271,20 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="z03-5H-u05">
                                 <rect key="frame" x="60" y="150" width="255" height="90"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qow-9r-wDH" customClass="LoginTextField" customModule="QuickChat" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qow-9r-wDH" customClass="BottomBorderTextField" customModule="QuickChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="VeN-MI-caH"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="username"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8mK-UQ-1Lv" customClass="LoginTextField" customModule="QuickChat" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8mK-UQ-1Lv" customClass="BottomBorderTextField" customModule="QuickChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55" width="255" height="35"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -294,7 +294,7 @@
                                     <constraint firstAttribute="trailing" secondItem="qow-9r-wDH" secondAttribute="trailing" id="m4B-3u-l0a"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LX-wi-YIA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LX-wi-YIA" customClass="RoundedButton" customModule="QuickChat" customModuleProvider="target">
                                 <rect key="frame" x="60" y="280" width="255" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509803922" green="0.62352941176470589" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -304,6 +304,14 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnLoginPressed:" destination="AtI-iR-Scs" eventType="touchUpInside" id="266-6G-6oQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJA-uX-9WU">
                                 <rect key="frame" x="60" y="330" width="255" height="29"/>
@@ -337,6 +345,8 @@
                         <viewLayoutGuide key="safeArea" id="Sz6-SJ-brV"/>
                     </view>
                     <connections>
+                        <outlet property="txtPassword" destination="8mK-UQ-1Lv" id="nAv-Hr-3V0"/>
+                        <outlet property="txtUsername" destination="qow-9r-wDH" id="P27-Za-DjI"/>
                         <segue destination="tl9-TX-rvE" kind="show" identifier="toSignUpSegue" id="OIB-Rv-5xe"/>
                     </connections>
                 </viewController>
@@ -364,7 +374,7 @@
                                     <action selector="btnClosePressed:" destination="tl9-TX-rvE" eventType="touchUpInside" id="zzi-PS-Rsj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8v-3D-e3i">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8v-3D-e3i" customClass="RoundedButton" customModule="QuickChat" customModuleProvider="target">
                                 <rect key="frame" x="60" y="597" width="255" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -374,6 +384,11 @@
                                 <state key="normal" title="CREATE ACCOUNT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="btnCreateAccountPressed:" destination="tl9-TX-rvE" eventType="touchUpInside" id="Jd1-YS-DPk"/>
                                 </connections>
@@ -391,32 +406,32 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EzY-FN-bzY">
                                 <rect key="frame" x="60" y="134" width="255" height="200"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PLP-mn-8pT" customClass="LoginTextField" customModule="QuickChat" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PLP-mn-8pT" customClass="BottomBorderTextField" customModule="QuickChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="2AS-xK-BjV"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="username"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MYh-Xl-Iy8" customClass="LoginTextField" customModule="QuickChat" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MYh-Xl-Iy8" customClass="BottomBorderTextField" customModule="QuickChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55" width="255" height="35"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qsW-l6-CGi" customClass="LoginTextField" customModule="QuickChat" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qsW-l6-CGi" customClass="BottomBorderTextField" customModule="QuickChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="110" width="255" height="35"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="re-enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RSL-I7-BgB" customClass="LoginTextField" customModule="QuickChat" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="re-enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RSL-I7-BgB" customClass="BottomBorderTextField" customModule="QuickChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="165" width="255" height="35"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -464,7 +479,6 @@
                             <constraint firstItem="6Wv-Fd-xyo" firstAttribute="top" secondItem="UUS-s9-OpP" secondAttribute="top" constant="10" id="1q7-Cg-2oC"/>
                             <constraint firstItem="dsL-mo-7xo" firstAttribute="top" secondItem="P6t-mD-mHO" secondAttribute="top" id="CEy-dl-UVT"/>
                             <constraint firstItem="Kz6-GJ-Zuc" firstAttribute="centerX" secondItem="XyZ-sZ-CPD" secondAttribute="centerX" id="DDA-y0-ZVZ"/>
-                            <constraint firstItem="P6t-mD-mHO" firstAttribute="leading" secondItem="UUS-s9-OpP" secondAttribute="leading" constant="120" id="EL0-cO-A08"/>
                             <constraint firstItem="Kz6-GJ-Zuc" firstAttribute="top" secondItem="P6t-mD-mHO" secondAttribute="bottom" constant="20" id="PqM-uz-AId"/>
                             <constraint firstItem="P6t-mD-mHO" firstAttribute="centerX" secondItem="XyZ-sZ-CPD" secondAttribute="centerX" id="RFF-9p-0Kh"/>
                             <constraint firstItem="EzY-FN-bzY" firstAttribute="leading" secondItem="UUS-s9-OpP" secondAttribute="leading" constant="60" id="Sk7-vG-myS"/>
@@ -475,6 +489,7 @@
                             <constraint firstItem="V8v-3D-e3i" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dsL-mo-7xo" secondAttribute="bottom" constant="40" id="dlN-EI-4rA"/>
                             <constraint firstItem="Fb0-Hl-Vbh" firstAttribute="top" secondItem="UUS-s9-OpP" secondAttribute="top" constant="40" id="fA1-nj-KK9"/>
                             <constraint firstItem="dsL-mo-7xo" firstAttribute="width" relation="greaterThanOrEqual" secondItem="P6t-mD-mHO" secondAttribute="width" id="fW3-7O-COz"/>
+                            <constraint firstItem="P6t-mD-mHO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UUS-s9-OpP" secondAttribute="leading" constant="120" id="fvz-sT-Nck"/>
                             <constraint firstItem="dsL-mo-7xo" firstAttribute="centerX" secondItem="XyZ-sZ-CPD" secondAttribute="centerX" id="gth-LV-VZk"/>
                             <constraint firstItem="UUS-s9-OpP" firstAttribute="bottom" secondItem="V8v-3D-e3i" secondAttribute="bottom" constant="20" id="jrS-4M-mrP"/>
                             <constraint firstItem="dsL-mo-7xo" firstAttribute="height" secondItem="P6t-mD-mHO" secondAttribute="height" constant="20" id="kvf-Aj-Z3x"/>
