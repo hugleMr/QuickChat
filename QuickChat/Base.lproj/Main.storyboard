@@ -361,7 +361,7 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" image="closeButton"/>
                                 <connections>
-                                    <segue destination="l1b-G6-iPY" kind="unwind" unwindAction="unwindToChannelVCWithUnwindSegue:" id="Cxj-vg-2KT"/>
+                                    <action selector="btnClosePressed:" destination="tl9-TX-rvE" eventType="touchUpInside" id="zzi-PS-Rsj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8v-3D-e3i">
@@ -492,6 +492,7 @@
                         <outlet property="txtPassword" destination="qsW-l6-CGi" id="h7d-qE-T4Z"/>
                         <outlet property="txtRePass" destination="RSL-I7-BgB" id="Ej0-Vf-zIc"/>
                         <outlet property="txtUsername" destination="PLP-mn-8pT" id="Fp4-Dn-mB9"/>
+                        <segue destination="l1b-G6-iPY" kind="unwind" identifier="toChannelSegue" unwindAction="unwindToChannelVCWithUnwindSegue:" id="ZGB-Yf-Tib"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HV6-C1-e5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
