@@ -19,7 +19,6 @@
 		C674185420A4434900A0E247 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674185320A4434900A0E247 /* ChannelVC.swift */; };
 		C69CA56520A59AFE0060FAA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69CA56420A59AFE0060FAA5 /* Constants.swift */; };
 		C69CA56720A59DA00060FAA5 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69CA56620A59DA00060FAA5 /* LoginTextField.swift */; };
-		C6DABD3520A53EFA00E164EB /* PBRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DABD3420A53EFA00E164EB /* PBRevealViewController.swift */; };
 		C6DABD3720A54C5500E164EB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DABD3620A54C5500E164EB /* GradientView.swift */; };
 		C6E12B3120AA9E77009F7BF2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E12B3020AA9E77009F7BF2 /* AuthService.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		C674185320A4434900A0E247 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		C69CA56420A59AFE0060FAA5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C69CA56620A59DA00060FAA5 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
-		C6DABD3420A53EFA00E164EB /* PBRevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBRevealViewController.swift; sourceTree = "<group>"; };
 		C6DABD3620A54C5500E164EB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C6E12B3020AA9E77009F7BF2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		DB10CA8FCBB439483FDB8F6B /* Pods_QuickChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +105,6 @@
 			children = (
 				C674185120A4433D00A0E247 /* ChatVC.swift */,
 				C674185320A4434900A0E247 /* ChannelVC.swift */,
-				C6DABD3420A53EFA00E164EB /* PBRevealViewController.swift */,
 				05E5C14F20A63A4D005A3F70 /* LoginVC.swift */,
 				05E486B920A7EEBB0012B818 /* SignUpVC.swift */,
 			);
@@ -233,6 +230,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-QuickChat/Pods-QuickChat-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PBRevealViewController/PBRevealViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -241,6 +239,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PBRevealViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -285,7 +284,6 @@
 				C674185220A4433D00A0E247 /* ChatVC.swift in Sources */,
 				C6DABD3720A54C5500E164EB /* GradientView.swift in Sources */,
 				C674183720A4238F00A0E247 /* AppDelegate.swift in Sources */,
-				C6DABD3520A53EFA00E164EB /* PBRevealViewController.swift in Sources */,
 				C69CA56520A59AFE0060FAA5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
