@@ -23,6 +23,10 @@ class BottomBorderTextField: UITextField {
         self.layer.masksToBounds = true
     }
     
+//    override func layoutSubviews() {
+//        customizedView()
+//    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         customizedView()
