@@ -33,3 +33,6 @@ let URL_ADD_USER = "\(BASE_URL)user/add"
 
 // HEADER
 let HEADER_API = ["Content-Type": "application/json; charset=utf-8"]
+
+// Constants
+let NUMBER_AVATAR_IMAGE = 28
