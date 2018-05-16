@@ -20,6 +20,11 @@ class AvatarVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         // Do any additional setup after loading the view.
         cltAvatar.delegate = self
         cltAvatar.dataSource = self
+        if avatarType == .light {
+            sgmColor.selectedSegmentIndex = 1
+        } else {
+            sgmColor.selectedSegmentIndex = 0
+        }
     }
 
     @IBAction func btnBackPressed(_ sender: UIButton) {
@@ -45,5 +50,10 @@ class AvatarVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
             return cell
         }
         return AvatarCollectionCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        UserDataService.instance.userData.setAvatarName("\(avatarType)\(indexPath.item)")
+        dismiss(animated: true, completion: nil)
     }
 }
