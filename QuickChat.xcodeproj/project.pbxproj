@@ -11,6 +11,10 @@
 		05E486BC20A849110012B818 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E486BB20A849110012B818 /* Extension.swift */; };
 		05E5C15020A63A4D005A3F70 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5C14F20A63A4D005A3F70 /* LoginVC.swift */; };
 		81B20A3C9E4B09D2C64A1A72 /* Pods_QuickChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB10CA8FCBB439483FDB8F6B /* Pods_QuickChat.framework */; };
+		C652D35520ABDE6100FDA685 /* AvatarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C652D35420ABDE6100FDA685 /* AvatarVC.swift */; };
+		C652D36420AC07EB00FDA685 /* AvatarCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C652D36220AC07EB00FDA685 /* AvatarCollectionCell.swift */; };
+		C652D36520AC07EB00FDA685 /* AvatarCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C652D36320AC07EB00FDA685 /* AvatarCollectionCell.xib */; };
+		C652D36920AC150F00FDA685 /* AvatarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C652D36820AC150F00FDA685 /* AvatarCollectionView.swift */; };
 		C674183720A4238F00A0E247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674183620A4238F00A0E247 /* AppDelegate.swift */; };
 		C674183C20A4238F00A0E247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C674183A20A4238F00A0E247 /* Main.storyboard */; };
 		C674183E20A4239500A0E247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C674183D20A4239500A0E247 /* Assets.xcassets */; };
@@ -32,6 +36,10 @@
 		05E486BB20A849110012B818 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		05E5C14F20A63A4D005A3F70 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C40621B8464D73B9DA2F024F /* Pods-QuickChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickChat/Pods-QuickChat.debug.xcconfig"; sourceTree = "<group>"; };
+		C652D35420ABDE6100FDA685 /* AvatarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarVC.swift; sourceTree = "<group>"; };
+		C652D36220AC07EB00FDA685 /* AvatarCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCollectionCell.swift; sourceTree = "<group>"; };
+		C652D36320AC07EB00FDA685 /* AvatarCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarCollectionCell.xib; sourceTree = "<group>"; };
+		C652D36820AC150F00FDA685 /* AvatarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCollectionView.swift; sourceTree = "<group>"; };
 		C674183320A4238F00A0E247 /* QuickChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C674183620A4238F00A0E247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C674183B20A4238F00A0E247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +123,7 @@
 				C674185320A4434900A0E247 /* ChannelVC.swift */,
 				05E5C14F20A63A4D005A3F70 /* LoginVC.swift */,
 				05E486B920A7EEBB0012B818 /* SignUpVC.swift */,
+				C652D35420ABDE6100FDA685 /* AvatarVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -134,6 +143,9 @@
 				C6DABD3620A54C5500E164EB /* GradientView.swift */,
 				C69CA56620A59DA00060FAA5 /* BottomBorderTextField.swift */,
 				C6E12B3220AAD12B009F7BF2 /* RoundedButton.swift */,
+				C652D36220AC07EB00FDA685 /* AvatarCollectionCell.swift */,
+				C652D36320AC07EB00FDA685 /* AvatarCollectionCell.xib */,
+				C652D36820AC150F00FDA685 /* AvatarCollectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +239,7 @@
 			files = (
 				C674184120A4239500A0E247 /* LaunchScreen.storyboard in Resources */,
 				C674183E20A4239500A0E247 /* Assets.xcassets in Resources */,
+				C652D36520AC07EB00FDA685 /* AvatarCollectionCell.xib in Resources */,
 				C674183C20A4238F00A0E247 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,9 +310,12 @@
 				C6E12B3120AA9E77009F7BF2 /* AuthService.swift in Sources */,
 				C6E12B3520AAE82F009F7BF2 /* UserDataService.swift in Sources */,
 				C6E12B3320AAD12B009F7BF2 /* RoundedButton.swift in Sources */,
+				C652D36420AC07EB00FDA685 /* AvatarCollectionCell.swift in Sources */,
 				C674185220A4433D00A0E247 /* ChatVC.swift in Sources */,
 				C6DABD3720A54C5500E164EB /* GradientView.swift in Sources */,
 				C674183720A4238F00A0E247 /* AppDelegate.swift in Sources */,
+				C652D36920AC150F00FDA685 /* AvatarCollectionView.swift in Sources */,
+				C652D35520ABDE6100FDA685 /* AvatarVC.swift in Sources */,
 				C69CA56520A59AFE0060FAA5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
