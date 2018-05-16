@@ -15,6 +15,20 @@ class UserData {
     public private(set) var avatarName = ""
     public private(set) var avatarColor = ""
     
+    init() {}
+    
+    init(id: String, name: String, email: String) {
+        self.id = id
+        self.name = name
+        self.email = email
+    }
+    
+    init(_ id: String, _ name: String, _ email: String) {
+        self.id = id
+        self.name = name
+        self.email = email
+    }
+    
     init(id: String, name: String, email: String, avatarName: String, avatarColor color: String) {
         self.id = id
         self.name = name
@@ -29,5 +43,21 @@ class UserData {
         self.email = email
         self.avatarName = avatarName
         self.avatarColor = color
+    }
+    
+    func setAvatarName(avatarName: String) {
+        self.avatarName = avatarName
+    }
+    
+    func setAvatarName(_ avatarName: String) {
+        self.avatarName = avatarName
+    }
+    
+    func setAvatarColor(avatarColor: String) {
+        self.avatarColor = avatarColor
+    }
+    
+    func setAvatarColor(_ avatarColor: String) {
+        self.avatarColor = avatarColor
     }
 }
