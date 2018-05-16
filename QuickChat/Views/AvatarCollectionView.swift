@@ -12,18 +12,23 @@ import UIKit
 class AvatarCollectionView: UICollectionView {
     
     
-    @IBInspectable var cellsPerRow: UInt = 4 {
+    @IBInspectable
+    var numberColumns: UInt = 4 {
         didSet {
+            if numberColumns != 0 {
+                customizedView()
+            }
             self.setNeedsLayout()
         }
     }
     
     fileprivate func customizedView() {
-        let item = CGFloat(cellsPerRow)
         if let flowLayout = self.collectionViewLayout as? UICollectionViewFlowLayout {
             let horizontalSpacing = flowLayout.scrollDirection == .vertical ? flowLayout.minimumInteritemSpacing : flowLayout.minimumLineSpacing
-            flowLayout.sectionInset = UIEdgeInsetsMake(0, horizontalSpacing / 2, 0, horizontalSpacing / 2)
-            let cellWidth = (self.bounds.width - max(0, item - 1) * horizontalSpacing - horizontalSpacing) / item
+            let sectionInset = horizontalSpacing
+            let cellsPerRow = CGFloat(numberColumns)
+            flowLayout.sectionInset = UIEdgeInsetsMake(0, sectionInset, 0, sectionInset)
+            let cellWidth = (self.bounds.width - max(0, cellsPerRow - 1) * horizontalSpacing - sectionInset * 2) / cellsPerRow
             flowLayout.itemSize = CGSize(width: cellWidth, height: cellWidth)
         }
     }
@@ -32,14 +37,14 @@ class AvatarCollectionView: UICollectionView {
 //        customizedView()
 //    }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        customizedView()
-    }
-
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        customizedView()
-    }
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        customizedView()
+//    }
+//
+//    override func prepareForInterfaceBuilder() {
+//        super.prepareForInterfaceBuilder()
+//        customizedView()
+//    }
     
 }
