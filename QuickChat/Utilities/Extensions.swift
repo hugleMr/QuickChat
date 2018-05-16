@@ -9,7 +9,19 @@
 import UIKit
 
 extension UIViewController {
+    
     @objc func backgroundTapped(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
+    
+}
+
+extension UIImageView {
+    
+    func setRounded() {
+        let radius = self.frame.width / 2
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+    }
+    
 }
