@@ -42,6 +42,9 @@ class SignUpVC: UIViewController {
             }
             imgUser.image = UIImage(named: avatarName)
         }
+        if bgColor != nil {
+            imgUser.backgroundColor = bgColor!
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -95,9 +98,9 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func btnGenerateBackgroundPressed(_ sender: UIButton) {
-        let red = CGFloat(arc4random_uniform(255) / 255)
-        let green = CGFloat(arc4random_uniform(255) / 255)
-        let blue = CGFloat(arc4random_uniform(255) / 255)
+        let red = CGFloat(arc4random_uniform(255)) / 255
+        let green = CGFloat(arc4random_uniform(255)) / 255
+        let blue = CGFloat(arc4random_uniform(255)) / 255
         bgColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
         imgUser.backgroundColor = bgColor
     }
