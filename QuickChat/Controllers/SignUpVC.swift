@@ -19,13 +19,35 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var imgUser: UIImageView!
     
     var avatarName = "profileDefault"
+    var avatarType = AvatarType.dark
     var avatarColor = "[0.5, 0.5, 0.5, 1]"
+    var bgColor: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let tapGestureBackground = UITapGestureRecognizer(target: self, action: #selector(self.backgroundTapped(_:)))
         self.view.addGestureRecognizer(tapGestureBackground)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.userData.avatarName != "" {
+            avatarName = UserDataService.instance.userData.avatarName
+            if (avatarName.hasPrefix("light")) {
+                avatarType = .light
+//                imgUser.layer.backgroundColor = UIColor.lightGray.cgColor
+            } else if (avatarName.hasPrefix("dark")){
+                avatarType = .dark
+//                imgUser.layer.backgroundColor = UIColor.darkGray.cgColor
+            }
+            imgUser.image = UIImage(named: avatarName)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? AvatarVC {
+            destinationViewController.avatarType = avatarType
+        }
     }
     
     @IBAction func btnCreateAccountPressed(_ sender: UIButton) {
@@ -72,6 +94,11 @@ class SignUpVC: UIViewController {
         performSegue(withIdentifier: TO_AVATAR, sender: nil)
     }
     
-    @IBAction func btnGenerateBackground(_ sender: UIButton) {
+    @IBAction func btnGenerateBackgroundPressed(_ sender: UIButton) {
+        let red = CGFloat(arc4random_uniform(255) / 255)
+        let green = CGFloat(arc4random_uniform(255) / 255)
+        let blue = CGFloat(arc4random_uniform(255) / 255)
+        bgColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        imgUser.backgroundColor = bgColor
     }
 }
