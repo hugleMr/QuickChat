@@ -485,15 +485,15 @@
                                     <action selector="btnSignUpPressed:" destination="AtI-iR-Scs" eventType="touchUpInside" id="byZ-yD-6Wl"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="P6t-mD-mHO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="P6t-mD-mHO">
                                 <rect key="frame" x="120" y="374" width="135" height="135.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="P6t-mD-mHO" secondAttribute="height" multiplier="1:1" id="42q-Cj-cad"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kz6-GJ-Zuc">
-                                <rect key="frame" x="113.5" y="529.5" width="148" height="29"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                <rect key="frame" x="101" y="529.5" width="173" height="32"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <state key="normal" title="Generate background color">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
