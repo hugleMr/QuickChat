@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05E486BA20A7EEBB0012B818 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E486B920A7EEBB0012B818 /* SignUpVC.swift */; };
-		05E486BC20A849110012B818 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E486BB20A849110012B818 /* Extension.swift */; };
+		05E486BC20A849110012B818 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E486BB20A849110012B818 /* Extensions.swift */; };
 		05E5C15020A63A4D005A3F70 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5C14F20A63A4D005A3F70 /* LoginVC.swift */; };
 		81B20A3C9E4B09D2C64A1A72 /* Pods_QuickChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB10CA8FCBB439483FDB8F6B /* Pods_QuickChat.framework */; };
 		C652D35520ABDE6100FDA685 /* AvatarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C652D35420ABDE6100FDA685 /* AvatarVC.swift */; };
@@ -34,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		05E486B920A7EEBB0012B818 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		05E486BB20A849110012B818 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		05E486BB20A849110012B818 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		05E5C14F20A63A4D005A3F70 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C40621B8464D73B9DA2F024F /* Pods-QuickChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickChat/Pods-QuickChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C652D35420ABDE6100FDA685 /* AvatarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarVC.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				C69CA56420A59AFE0060FAA5 /* Constants.swift */,
-				05E486BB20A849110012B818 /* Extension.swift */,
+				05E486BB20A849110012B818 /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -305,7 +305,7 @@
 			files = (
 				C6D06D6420AC29DD009CEF79 /* AvatarType.swift in Sources */,
 				C6E12B3720AAE93B009F7BF2 /* User.swift in Sources */,
-				05E486BC20A849110012B818 /* Extension.swift in Sources */,
+				05E486BC20A849110012B818 /* Extensions.swift in Sources */,
 				C6E12B3920AAEB14009F7BF2 /* UserData.swift in Sources */,
 				C674185420A4434900A0E247 /* ChannelVC.swift in Sources */,
 				05E486BA20A7EEBB0012B818 /* SignUpVC.swift in Sources */,
