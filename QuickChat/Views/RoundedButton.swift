@@ -21,11 +21,15 @@ class RoundedButton: UIButton {
         self.layer.cornerRadius = cornerRadius
     }
     
+//    override func layoutSubviews() {
+//        customizedView()
+//    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         customizedView()
     }
-    
+
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         customizedView()
