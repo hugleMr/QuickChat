@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class AvatarCollectionCell: UICollectionViewCell {
 
     @IBOutlet weak var imgAvatar: UIImageView!
@@ -16,6 +17,15 @@ class AvatarCollectionCell: UICollectionViewCell {
         self.layer.backgroundColor = UIColor.lightGray.cgColor
         self.layer.cornerRadius = 10
         self.clipsToBounds = true
+    }
+    
+    func configureCell(index: Int, type: AvatarType) {
+        imgAvatar.image = UIImage(named: "\(type)\(index)")
+        if type == AvatarType.dark {
+            self.layer.backgroundColor = UIColor.darkGray.cgColor
+        } else {
+            self.layer.backgroundColor = UIColor.lightGray.cgColor
+        }
     }
     
 //    override func layoutSubviews() {
