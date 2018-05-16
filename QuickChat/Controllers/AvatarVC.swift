@@ -12,6 +12,8 @@ class AvatarVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     @IBOutlet weak var cltAvatar: UICollectionView!
     @IBOutlet weak var sgmColor: UISegmentedControl!
+    
+    var avatarType = AvatarType.dark
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,21 +27,23 @@ class AvatarVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     
     @IBAction func sgmColorChanged(_ sender: UISegmentedControl) {
-        
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        if sgmColor.selectedSegmentIndex == 0 {
+            avatarType = .dark
+        } else {
+            avatarType = .light
+        }
+        cltAvatar.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 28
+        return NUMBER_AVATAR_IMAGE
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = cltAvatar.dequeueReusableCell(withReuseIdentifier: AVATAR_CELL, for: indexPath) as? AvatarCollectionCell {
+            cell.configureCell(index: indexPath.item, type: avatarType)
             return cell
         }
-        return UICollectionViewCell()
+        return AvatarCollectionCell()
     }
 }
