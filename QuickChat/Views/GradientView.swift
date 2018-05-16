@@ -15,51 +15,57 @@ class GradientView: UIView {
         case degree = 0, radian, gradian
     }
     
-    @IBInspectable var repeated: UInt = 0 {
+    @IBInspectable
+    var degree: DegreeUnit = .radian {
         didSet {
             self.setNeedsLayout()
         }
     }
     
-    @IBInspectable var resolution: UInt = 512 {
+    @IBInspectable
+    var repeated: UInt = 0 {
         didSet {
             self.setNeedsLayout()
         }
     }
     
-    @IBInspectable var angle: Double = 0 {
+    @IBInspectable
+    var resolution: UInt = 512 {
         didSet {
             self.setNeedsLayout()
         }
     }
     
-    @IBInspectable var degree: DegreeUnit = .radian {
+    @IBInspectable
+    var angle: Double = 0 {
         didSet {
             self.setNeedsLayout()
         }
     }
     
-//    @IBInspectable var topColor: UIColor = UIColor.red {
+//    @IBInspectable
+//    var topColor: UIColor = UIColor.red {
 //        didSet {
 //            self.setNeedsLayout()
 //        }
 //    }
 //
-//    @IBInspectable var bottomColor: UIColor = UIColor.purple {
+//    @IBInspectable
+//    var bottomColor: UIColor = UIColor.purple {
 //        didSet {
 //            self.setNeedsLayout()
 //        }
 //    }
     
-    override func layoutSubviews() {
+    fileprivate func customizedView() {
         let subdivisions:CGFloat = CGFloat(resolution / (repeated + 1))
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = []
         for i in 0 ..< 512 {
             let pointColor: CGColor = UIColor(hue: CGFloat(i)/subdivisions, saturation: 1, brightness: 1, alpha: 1).cgColor
             gradientLayer.colors?.append(pointColor)
-            }
-//        gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
+        }
+        //        gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
         let angleGrad = angle * Double.pi
         var x = 0.5 * cos(angleGrad)
         var y = 0.5 * sin(angleGrad)
@@ -74,5 +80,19 @@ class GradientView: UIView {
         gradientLayer.endPoint = CGPoint(x: 1 - x, y: 1 - y)
         gradientLayer.frame = self.bounds
         self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+//    override func layoutSubviews() {
+//        customizedView()
+//    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        customizedView()
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        customizedView()
     }
 }

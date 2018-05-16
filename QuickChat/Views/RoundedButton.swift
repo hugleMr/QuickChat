@@ -11,24 +11,12 @@ import UIKit
 @IBDesignable
 class RoundedButton: UIButton {
     
-    @IBInspectable var cornerRadius: CGFloat = 3.0 {
+    @IBInspectable
+    var cornerRadius: CGFloat = 3.0 {
         didSet {
+            self.layer.cornerRadius = cornerRadius
             self.setNeedsLayout()
         }
-    }
-
-    fileprivate func customizedView() {
-        self.layer.cornerRadius = cornerRadius
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        customizedView()
-    }
-    
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        customizedView()
     }
 
 }
