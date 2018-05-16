@@ -27,18 +27,20 @@ class SignUpVC: UIViewController {
         // Do any additional setup after loading the view.
         let tapGestureBackground = UITapGestureRecognizer(target: self, action: #selector(self.backgroundTapped(_:)))
         self.view.addGestureRecognizer(tapGestureBackground)
+        imgUser.setRounded()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidLoad()
+        print(imgUser.frame.size)
         if UserDataService.instance.userData.avatarName != "" {
             avatarName = UserDataService.instance.userData.avatarName
             if (avatarName.hasPrefix("light")) {
                 avatarType = .light
-//                imgUser.layer.backgroundColor = UIColor.lightGray.cgColor
+                imgUser.backgroundColor = UIColor.darkGray
             } else if (avatarName.hasPrefix("dark")){
                 avatarType = .dark
-//                imgUser.layer.backgroundColor = UIColor.darkGray.cgColor
+                imgUser.backgroundColor = UIColor.lightGray
             }
             imgUser.image = UIImage(named: avatarName)
         }
