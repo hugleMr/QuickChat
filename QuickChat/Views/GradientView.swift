@@ -82,17 +82,17 @@ class GradientView: UIView {
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
-//    override func layoutSubviews() {
+    override func layoutSubviews() {
+        customizedView()
+    }
+    
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
 //        customizedView()
 //    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        customizedView()
-    }
-    
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        customizedView()
-    }
+//
+//    override func prepareForInterfaceBuilder() {
+//        super.prepareForInterfaceBuilder()
+//        customizedView()
+//    }
 }
