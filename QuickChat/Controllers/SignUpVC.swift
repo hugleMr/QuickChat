@@ -31,6 +31,7 @@ class SignUpVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidLoad()
         if UserDataService.instance.userData.avatarName != "" {
             avatarName = UserDataService.instance.userData.avatarName
             if (avatarName.hasPrefix("light")) {
