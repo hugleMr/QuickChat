@@ -1,5 +1,5 @@
 //
-//  AvatarCollection.swift
+//  AvatarCollectionView
 //  QuickChat
 //
 //  Created by thanhbh on 5/16/18.
@@ -38,11 +38,11 @@ class AvatarCollectionView: UICollectionView {
 //        customizedView()
 //    }
     
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        customizedView()
-//    }
-//
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        customizedView()
+    }
+
     override func prepareForInterfaceBuilder() {
         customizedView()
     }

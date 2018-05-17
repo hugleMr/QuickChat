@@ -1,5 +1,5 @@
 //
-//  AvatarCell.swift
+//  AvatarCollectionCell.swift
 //  QuickChat
 //
 //  Created by thanhbh on 5/16/18.

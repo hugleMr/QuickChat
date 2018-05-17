@@ -1,5 +1,5 @@
 //
-//  ProfileVCViewController.swift
+//  ProfileVC.swift
 //  QuickChat
 //
 //  Created by thanhbh on 5/17/18.
