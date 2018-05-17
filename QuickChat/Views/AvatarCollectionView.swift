@@ -20,7 +20,7 @@ class AvatarCollectionView: UICollectionView {
         }
     }
     
-    var sectionInset = CGFloat(0.0)
+    var sectionInset = CGFloat(5.0)
     
     fileprivate func customizedView() {
         if let flowLayout = self.collectionViewLayout as? UICollectionViewFlowLayout, numberColumns != 0 {
