@@ -13,7 +13,7 @@ class AvatarVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var cltAvatar: UICollectionView!
     @IBOutlet weak var sgmColor: UISegmentedControl!
     
-    var avatarType = AvatarType.dark
+    var avatarType: AvatarType = .dark
 
     override func viewDidLoad() {
         super.viewDidLoad()
