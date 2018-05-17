@@ -8,6 +8,7 @@
 
 import UIKit
 import PBRevealViewController
+import Toast_Swift
 
 class ChatVC: UIViewController {
 
