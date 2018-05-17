@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,7 +17,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PBRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -489,6 +489,7 @@
                                 <rect key="frame" x="120" y="374" width="135" height="135.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="P6t-mD-mHO" secondAttribute="height" multiplier="1:1" id="42q-Cj-cad"/>
+                                    <constraint firstAttribute="width" constant="90" id="QKu-AG-gL7"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kz6-GJ-Zuc">
@@ -534,7 +535,6 @@
                             <constraint firstItem="V8v-3D-e3i" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dsL-mo-7xo" secondAttribute="bottom" constant="40" id="dlN-EI-4rA"/>
                             <constraint firstItem="Fb0-Hl-Vbh" firstAttribute="top" secondItem="UUS-s9-OpP" secondAttribute="top" constant="40" id="fA1-nj-KK9"/>
                             <constraint firstItem="dsL-mo-7xo" firstAttribute="width" relation="greaterThanOrEqual" secondItem="P6t-mD-mHO" secondAttribute="width" id="fW3-7O-COz"/>
-                            <constraint firstItem="P6t-mD-mHO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UUS-s9-OpP" secondAttribute="leading" constant="120" id="fvz-sT-Nck"/>
                             <constraint firstItem="dsL-mo-7xo" firstAttribute="centerX" secondItem="XyZ-sZ-CPD" secondAttribute="centerX" id="gth-LV-VZk"/>
                             <constraint firstItem="UUS-s9-OpP" firstAttribute="bottom" secondItem="V8v-3D-e3i" secondAttribute="bottom" constant="20" id="jrS-4M-mrP"/>
                             <constraint firstItem="dsL-mo-7xo" firstAttribute="height" secondItem="P6t-mD-mHO" secondAttribute="height" constant="20" id="kvf-Aj-Z3x"/>
@@ -605,14 +605,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="avatarCollectionCell" id="zy5-9w-cEO" customClass="AvatarCollectionCell" customModule="QuickChat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="10" y="0.0" width="79.75" height="79.75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="79.75" height="79.75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ms3-kI-eeH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="124.5" height="124.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Ms3-kI-eeH" secondAttribute="height" multiplier="1:1" id="4DF-sX-4Hd"/>
                                                     </constraints>
