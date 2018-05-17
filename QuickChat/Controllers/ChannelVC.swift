@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PBRevealViewController
 
 class ChannelVC: UIViewController {
 
@@ -21,9 +20,10 @@ class ChannelVC: UIViewController {
     }
 
     @IBAction func btnLoginPressed(_ sender: Any) {
-        print(AuthService.instance.isLoggedIn)
         if AuthService.instance.isLoggedIn {
-            
+            let profileVC = ProfileVC()
+            profileVC.modalPresentationStyle = .custom
+            present(profileVC, animated: true, completion: nil)
         } else {
             performSegue(withIdentifier: TO_LOGIN, sender: nil)
         }
