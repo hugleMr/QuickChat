@@ -20,13 +20,15 @@ class ChannelVC: UIViewController {
     }
 
     @IBAction func btnLoginPressed(_ sender: Any) {
-        if AuthService.instance.isLoggedIn {
+//        if AuthService.instance.isLoggedIn {
             let profileVC = ProfileVC()
             profileVC.modalPresentationStyle = .custom
+//            profileVC.closeTouch = UIGestureRecognizer(target: profileVC, action: #selector(profileVC.closeTapped(_:)))
+//            profileVC.bgView.addGestureRecognizer(profileVC.closeTouch)
             present(profileVC, animated: true, completion: nil)
-        } else {
-            performSegue(withIdentifier: TO_LOGIN, sender: nil)
-        }
+//        } else {
+//            performSegue(withIdentifier: TO_LOGIN, sender: nil)
+//        }
     }
     
     @IBAction func unwindToChannelVC(unwindSegue: UIStoryboardSegue){}

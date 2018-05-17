@@ -14,6 +14,10 @@ extension UIViewController {
         self.view.endEditing(true)
     }
     
+    @objc func closeTapped(_ sender: UITapGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension UIImageView {
