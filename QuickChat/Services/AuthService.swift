@@ -24,9 +24,9 @@ class AuthService {
         }
     }
     
-    var authToken: String {
+    var authToken: String? {
         get {
-            return defaults.value(forKey: TOKEN_KEY) as! String
+            return defaults.value(forKey: TOKEN_KEY) as? String
         }
         set {
             defaults.set(newValue, forKey: TOKEN_KEY)
@@ -85,6 +85,7 @@ class AuthService {
                 self.isLoggedIn = true
                 completion(true)
             } else {
+                self.isLoggedIn = false
                 completion(false)
                 debugPrint(response.result.error as Any)
             }
@@ -99,28 +100,32 @@ class AuthService {
             "avatarName": avatarName,
             "avatarColor" : avatarColor
         ]
-        let header = [
-            "Authorization": "Bearer \(authToken)"
-        ]
-        Alamofire.request(URL_ADD_USER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header.merging(HEADER_API, uniquingKeysWith: { (oldValue, newValue) -> String in
-            return newValue
-        })).responseJSON { (response) in
-            if response.result.error == nil {
-                guard let data = response.data else {
-                    return
+        if let authToken = self.authToken {
+            let header = [
+                "Authorization": "Bearer \(authToken)"
+            ]
+            Alamofire.request(URL_ADD_USER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header.merging(HEADER_API, uniquingKeysWith: { (oldValue, newValue) -> String in
+                return newValue
+            })).responseJSON { (response) in
+                if response.result.error == nil {
+                    guard let data = response.data else {
+                        return
+                    }
+                    let json = JSON(data)
+                    let id = json["_id"].stringValue
+                    let name = json["name"].stringValue
+                    let email = json["email"].stringValue
+                    let avatarName = json["avatarName"].stringValue
+                    let avatarColor = json["avatarColor"].stringValue
+                    UserDataService.instance.setUserData(userData: UserData(id: id, name: name, email: email, avatarName: avatarName, avatarColor: avatarColor))
+                    completion(true)
+                } else {
+                    completion(false)
+                    debugPrint(response.result.error as Any)
                 }
-                let json = JSON(data)
-                let id = json["_id"].stringValue
-                let name = json["name"].stringValue
-                let email = json["email"].stringValue
-                let avatarName = json["avatarName"].stringValue
-                let avatarColor = json["avatarColor"].stringValue
-                UserDataService.instance.setUserData(userData: UserData(id: id, name: name, email: email, avatarName: avatarName, avatarColor: avatarColor))
-                completion(true)
-            } else {
-                completion(false)
-                debugPrint(response.result.error as Any)
             }
+        } else {
+            completion(false)
         }
     }
 }

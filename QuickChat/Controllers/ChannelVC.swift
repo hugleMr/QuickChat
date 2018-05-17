@@ -12,14 +12,34 @@ import PBRevealViewController
 class ChannelVC: UIViewController {
 
     @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var imgUser: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(self.userDataDidChanged), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
     }
 
     @IBAction func btnLoginPressed(_ sender: Any) {
-        performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        print(AuthService.instance.isLoggedIn)
+        if AuthService.instance.isLoggedIn {
+            
+        } else {
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        }
     }
     
     @IBAction func unwindToChannelVC(unwindSegue: UIStoryboardSegue){}
+    
+    @objc func userDataDidChanged(_ notif: Notification) {
+        if AuthService.instance.isLoggedIn {
+            btnLogin.setTitle(UserDataService.instance.userData.name, for: .normal)
+            imgUser.image = UIImage(named: UserDataService.instance.userData.avatarName)
+            imgUser.backgroundColor = UserDataService.instance.userData.getAvatarColor()
+        } else {
+            btnLogin.setTitle("Login", for: .normal)
+            imgUser.image = UIImage(named: "profileDefault")
+            imgUser.backgroundColor = nil
+        }
+    }
 }

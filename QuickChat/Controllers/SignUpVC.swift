@@ -16,6 +16,7 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtRePass: UITextField!
     @IBOutlet weak var imgUser: UIImageView!
+    @IBOutlet weak var aivSignUp: UIActivityIndicatorView!
     
     var avatarName = "profileDefault"
     var avatarType = AvatarType.dark
@@ -25,12 +26,11 @@ class SignUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let tapGestureBackground = UITapGestureRecognizer(target: self, action: #selector(self.backgroundTapped(_:)))
+        let tapGestureBackground = UITapGestureRecognizer(target: self, action: #selector(self.backgroundTapped))
         self.view.addGestureRecognizer(tapGestureBackground)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidLoad()
         if UserDataService.instance.userData.avatarName != "" {
             avatarName = UserDataService.instance.userData.avatarName
             if (avatarName.hasPrefix("light")) {
@@ -45,6 +45,7 @@ class SignUpVC: UIViewController {
         if bgColor != nil {
             imgUser.backgroundColor = bgColor!
         }
+        aivSignUp.isHidden = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -69,6 +70,8 @@ class SignUpVC: UIViewController {
         if rePass != pass {
             return
         }
+        aivSignUp.isHidden = false
+        aivSignUp.startAnimating()
         //AuthService.instance.registerUser(user: User(email, pass)) { (success) in
         //    if success {
         //        self.dismiss(animated: true, completion: nil)
@@ -78,7 +81,10 @@ class SignUpVC: UIViewController {
         //}
         AuthService.instance.createUser(name: name, email: email, avatarName: avatarName, avatarColor: avatarColor) { (success) in
             if success {
+                self.aivSignUp.isHidden = true
+                self.aivSignUp.stopAnimating()
                 self.performSegue(withIdentifier: TO_CHANNEL, sender: nil)
+                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
             } else {
                 print("User cannot be created!")
             }
@@ -102,6 +108,7 @@ class SignUpVC: UIViewController {
         let green = CGFloat(arc4random_uniform(255)) / 255
         let blue = CGFloat(arc4random_uniform(255)) / 255
         bgColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        avatarColor = "[\(red), \(green), \(blue), 1]"
         UIView.animate(withDuration: 0.4) {
             self.imgUser.backgroundColor = self.bgColor
 //            self.txtUsername.attributedPlaceholder = NSAttributedString(string: self.txtUsername.placeholder!, attributes: [NSAttributedStringKey.foregroundColor : self.bgColor!])

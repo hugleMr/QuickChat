@@ -16,7 +16,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let tapGestureBackground = UITapGestureRecognizer(target: self, action: #selector(self.backgroundTapped(_:)))
+        let tapGestureBackground = UITapGestureRecognizer(target: self, action: #selector(self.backgroundTapped))
         self.view.addGestureRecognizer(tapGestureBackground)
     }
 
@@ -33,7 +33,7 @@ class LoginVC: UIViewController {
         }
         AuthService.instance.loginUser(user: User(email, pass)) { (success) in
             if success {
-                print(AuthService.instance.authToken)
+                print(AuthService.instance.authToken!)
             } else {
                 print("Login failed!")
             }

@@ -36,3 +36,4 @@ let HEADER_API = ["Content-Type": "application/json; charset=utf-8"]
 
 // Constants
 let NUMBER_AVATAR_IMAGE = 28
+let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
