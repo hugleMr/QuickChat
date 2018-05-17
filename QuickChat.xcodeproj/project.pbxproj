@@ -13,7 +13,6 @@
 		81B20A3C9E4B09D2C64A1A72 /* Pods_QuickChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB10CA8FCBB439483FDB8F6B /* Pods_QuickChat.framework */; };
 		C652D35520ABDE6100FDA685 /* AvatarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C652D35420ABDE6100FDA685 /* AvatarVC.swift */; };
 		C652D36420AC07EB00FDA685 /* AvatarCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C652D36220AC07EB00FDA685 /* AvatarCollectionCell.swift */; };
-		C652D36520AC07EB00FDA685 /* AvatarCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C652D36320AC07EB00FDA685 /* AvatarCollectionCell.xib */; };
 		C652D36920AC150F00FDA685 /* AvatarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C652D36820AC150F00FDA685 /* AvatarCollectionView.swift */; };
 		C674183720A4238F00A0E247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674183620A4238F00A0E247 /* AppDelegate.swift */; };
 		C674183C20A4238F00A0E247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C674183A20A4238F00A0E247 /* Main.storyboard */; };
@@ -24,6 +23,9 @@
 		C678F13420AD1EA1009D3628 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678F13320AD1EA1009D3628 /* CircleImageView.swift */; };
 		C69CA56520A59AFE0060FAA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69CA56420A59AFE0060FAA5 /* Constants.swift */; };
 		C69CA56720A59DA00060FAA5 /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69CA56620A59DA00060FAA5 /* BottomBorderTextField.swift */; };
+		C6BC022920AD508C009B8C70 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BC022720AD508C009B8C70 /* ProfileVC.swift */; };
+		C6BC022C20AD5EFA009B8C70 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BC022E20AD5EFA009B8C70 /* ProfileVC.xib */; };
+		C6BC022F20AD5F00009B8C70 /* AvatarCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BC023120AD5F00009B8C70 /* AvatarCollectionCell.xib */; };
 		C6D06D6420AC29DD009CEF79 /* AvatarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D06D6320AC29DD009CEF79 /* AvatarType.swift */; };
 		C6DABD3720A54C5500E164EB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DABD3620A54C5500E164EB /* GradientView.swift */; };
 		C6E12B3120AA9E77009F7BF2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E12B3020AA9E77009F7BF2 /* AuthService.swift */; };
@@ -40,7 +42,6 @@
 		C40621B8464D73B9DA2F024F /* Pods-QuickChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickChat/Pods-QuickChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C652D35420ABDE6100FDA685 /* AvatarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarVC.swift; sourceTree = "<group>"; };
 		C652D36220AC07EB00FDA685 /* AvatarCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCollectionCell.swift; sourceTree = "<group>"; };
-		C652D36320AC07EB00FDA685 /* AvatarCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarCollectionCell.xib; sourceTree = "<group>"; };
 		C652D36820AC150F00FDA685 /* AvatarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCollectionView.swift; sourceTree = "<group>"; };
 		C674183320A4238F00A0E247 /* QuickChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C674183620A4238F00A0E247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +54,9 @@
 		C678F13320AD1EA1009D3628 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		C69CA56420A59AFE0060FAA5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C69CA56620A59DA00060FAA5 /* BottomBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
+		C6BC022720AD508C009B8C70 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		C6BC022D20AD5EFA009B8C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileVC.xib; sourceTree = "<group>"; };
+		C6BC023020AD5F00009B8C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AvatarCollectionCell.xib; sourceTree = "<group>"; };
 		C6D06D6320AC29DD009CEF79 /* AvatarType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarType.swift; sourceTree = "<group>"; };
 		C6DABD3620A54C5500E164EB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C6E12B3020AA9E77009F7BF2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				C674184F20A4416000A0E247 /* Models */,
 				C674184E20A4411800A0E247 /* Controllers */,
 				C674183620A4238F00A0E247 /* AppDelegate.swift */,
+				C6BC022E20AD5EFA009B8C70 /* ProfileVC.xib */,
+				C6BC023120AD5F00009B8C70 /* AvatarCollectionCell.xib */,
 				C674183A20A4238F00A0E247 /* Main.storyboard */,
 				C674183D20A4239500A0E247 /* Assets.xcassets */,
 				C674183F20A4239500A0E247 /* LaunchScreen.storyboard */,
@@ -128,6 +134,7 @@
 				05E5C14F20A63A4D005A3F70 /* LoginVC.swift */,
 				05E486B920A7EEBB0012B818 /* SignUpVC.swift */,
 				C652D35420ABDE6100FDA685 /* AvatarVC.swift */,
+				C6BC022720AD508C009B8C70 /* ProfileVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,7 +156,6 @@
 				C69CA56620A59DA00060FAA5 /* BottomBorderTextField.swift */,
 				C6E12B3220AAD12B009F7BF2 /* RoundedButton.swift */,
 				C652D36220AC07EB00FDA685 /* AvatarCollectionCell.swift */,
-				C652D36320AC07EB00FDA685 /* AvatarCollectionCell.xib */,
 				C652D36820AC150F00FDA685 /* AvatarCollectionView.swift */,
 				C678F13320AD1EA1009D3628 /* CircleImageView.swift */,
 			);
@@ -243,9 +249,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6BC022C20AD5EFA009B8C70 /* ProfileVC.xib in Resources */,
 				C674184120A4239500A0E247 /* LaunchScreen.storyboard in Resources */,
 				C674183E20A4239500A0E247 /* Assets.xcassets in Resources */,
-				C652D36520AC07EB00FDA685 /* AvatarCollectionCell.xib in Resources */,
+				C6BC022F20AD5F00009B8C70 /* AvatarCollectionCell.xib in Resources */,
 				C674183C20A4238F00A0E247 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +330,7 @@
 				C6DABD3720A54C5500E164EB /* GradientView.swift in Sources */,
 				C674183720A4238F00A0E247 /* AppDelegate.swift in Sources */,
 				C652D36920AC150F00FDA685 /* AvatarCollectionView.swift in Sources */,
+				C6BC022920AD508C009B8C70 /* ProfileVC.swift in Sources */,
 				C652D35520ABDE6100FDA685 /* AvatarVC.swift in Sources */,
 				C69CA56520A59AFE0060FAA5 /* Constants.swift in Sources */,
 			);
@@ -345,6 +353,22 @@
 				C674184020A4239500A0E247 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C6BC022E20AD5EFA009B8C70 /* ProfileVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6BC022D20AD5EFA009B8C70 /* Base */,
+			);
+			name = ProfileVC.xib;
+			sourceTree = "<group>";
+		};
+		C6BC023120AD5F00009B8C70 /* AvatarCollectionCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6BC023020AD5F00009B8C70 /* Base */,
+			);
+			name = AvatarCollectionCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
