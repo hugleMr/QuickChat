@@ -38,7 +38,6 @@ class AvatarCollectionCell: UICollectionViewCell {
     }
     
     override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
         customizedView()
     }
 

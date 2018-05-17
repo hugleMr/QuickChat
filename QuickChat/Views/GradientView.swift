@@ -87,12 +87,10 @@ class GradientView: UIView {
     }
     
 //    override func awakeFromNib() {
-//        super.awakeFromNib()
 //        customizedView()
 //    }
 //
 //    override func prepareForInterfaceBuilder() {
-//        super.prepareForInterfaceBuilder()
 //        customizedView()
 //    }
 }

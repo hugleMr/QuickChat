@@ -20,10 +20,12 @@ class AvatarCollectionView: UICollectionView {
         }
     }
     
+    var sectionInset = CGFloat(0.0)
+    
     fileprivate func customizedView() {
         if let flowLayout = self.collectionViewLayout as? UICollectionViewFlowLayout, numberColumns != 0 {
             let horizontalSpacing = flowLayout.scrollDirection == .vertical ? flowLayout.minimumInteritemSpacing : flowLayout.minimumLineSpacing
-            let sectionInset = horizontalSpacing
+            sectionInset = horizontalSpacing / 2
             let cellsPerRow = CGFloat(numberColumns)
             flowLayout.sectionInset = UIEdgeInsetsMake(0, sectionInset, 0, sectionInset)
             let cellWidth = (self.bounds.width - max(0, cellsPerRow - 1) * horizontalSpacing - sectionInset * 2.5 - CGFloat(1)) / cellsPerRow
@@ -42,7 +44,6 @@ class AvatarCollectionView: UICollectionView {
 //    }
 //
     override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
         customizedView()
     }
     

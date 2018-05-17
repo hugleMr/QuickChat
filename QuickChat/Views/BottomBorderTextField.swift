@@ -35,7 +35,6 @@ class BottomBorderTextField: UITextField {
 //    }
     
 //    override func awakeFromNib() {
-//        super.awakeFromNib()
 //        customizedView()
 //    }
 //

@@ -16,7 +16,6 @@ class CircleImageView: UIImageView {
     }
     
     override func prepareForInterfaceBuilder() {
-        self.prepareForInterfaceBuilder()
         self.setRounded()
     }
 
