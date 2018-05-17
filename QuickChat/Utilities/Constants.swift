@@ -20,16 +20,18 @@ let CHANNEL_CELL = "channelCell"
 let AVATAR_CELL = "avatarCollectionCell"
 
 // User defaults
-let TOKEN_KEY = "token"
+let ERROR_MESSAGE = "errorMessage"
 let LOGGED_IN_KEY = "loggedIn"
+let TOKEN_KEY = "token"
 let USER_EMAIL = "userEmail"
 
 // API URL
-//let BASE_URL = "https://quickchat-api.herokuapp.com/v1/"
-let BASE_URL = "http://localhost:3005/v1/"
+let BASE_URL = "https://quickchat-api.herokuapp.com/v1/"
+//let BASE_URL = "http://localhost:3005/v1/"
 let URL_REGISTER_USER = "\(BASE_URL)account/register"
 let URL_LOGIN_USER = "\(BASE_URL)account/login"
 let URL_ADD_USER = "\(BASE_URL)user/add"
+let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 
 // HEADER
 let HEADER_API = ["Content-Type": "application/json; charset=utf-8"]
