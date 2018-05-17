@@ -24,7 +24,7 @@ class AvatarVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
             let numberColumns = CGFloat(tmpCollectionAvatar.numberColumns)
             if let flowLayout = cltAvatar.collectionViewLayout as? UICollectionViewFlowLayout, numberColumns != 0 {
                 let horizontalSpacing = flowLayout.scrollDirection == .vertical ? flowLayout.minimumInteritemSpacing : flowLayout.minimumLineSpacing
-                let sectionInset = horizontalSpacing
+                let sectionInset = tmpCollectionAvatar.sectionInset
                 flowLayout.sectionInset = UIEdgeInsetsMake(0, sectionInset, 0, sectionInset)
                 let totalCellWidth = self.view.frame.width - max(0, numberColumns - 1) * horizontalSpacing - sectionInset * 2 - CGFloat(1)
                 let cellWidth = totalCellWidth / numberColumns
