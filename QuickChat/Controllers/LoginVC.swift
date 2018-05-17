@@ -12,11 +12,12 @@ class LoginVC: UIViewController {
 
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var aivLogin: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let tapGestureBackground = UITapGestureRecognizer(target: self, action: #selector(self.backgroundTapped))
+        let tapGestureBackground = UITapGestureRecognizer(target: self, action: #selector(self.backgroundTapped(_:)))
         self.view.addGestureRecognizer(tapGestureBackground)
     }
 
@@ -31,13 +32,21 @@ class LoginVC: UIViewController {
         guard let pass = txtPassword.text, txtPassword.text != "" else {
             return
         }
+        self.aivLogin.startAnimating()
+        self.aivLogin.isHidden = false
         AuthService.instance.loginUser(user: User(email, pass)) { (success) in
             if success {
-                print(AuthService.instance.authToken!)
+                if AuthService.instance.isLoggedIn {
+                    self.performSegue(withIdentifier: TO_SIGN_UP, sender: "Login successful!")
+                } else {
+                    self.view.makeToast(AuthService.instance.errorMessage)
+                }
             } else {
-                print("Login failed!")
+                self.view.makeToast("Login failed! Check out the connection!")
             }
         }
+        self.aivLogin.isHidden = true
+        self.aivLogin.stopAnimating()
     }
     
     @IBAction func btnSignUpPressed(_ sender: UIButton) {
@@ -45,5 +54,11 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func unwindToLoginVC(unwindSegue: UIStoryboardSegue){}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? SignUpVC {
+            destinationViewController.toastText = sender as? String
+        }
+    }
 
 }
