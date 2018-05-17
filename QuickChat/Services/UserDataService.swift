@@ -27,9 +27,21 @@ class UserDataService {
 //        self.avatarColor = userData.avatarColor
 //    }
     
-    public private(set) var userData = UserData()
+    init() {
+        self.userData = emptyUserData
+    }
     
+    private let emptyUserData = UserData()
+    public private(set) var userData: UserData
+
     func setUserData(userData: UserData) {
         self.userData = userData
+    }
+    
+    func loggoutUser() {
+        self.userData = emptyUserData
+        AuthService.instance.isLoggedIn = false
+        AuthService.instance.authToken = nil
+        AuthService.instance.userEmail = ""
     }
 }
