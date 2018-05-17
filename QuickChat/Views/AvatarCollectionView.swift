@@ -15,7 +15,7 @@ class AvatarCollectionView: UICollectionView {
     @IBInspectable
     var numberColumns: UInt = 4 {
         didSet {
-            customizedView()
+//            customizedView()
             self.setNeedsLayout()
         }
     }
@@ -27,8 +27,9 @@ class AvatarCollectionView: UICollectionView {
                 let sectionInset = horizontalSpacing
                 let cellsPerRow = CGFloat(numberColumns)
                 flowLayout.sectionInset = UIEdgeInsetsMake(0, sectionInset, 0, sectionInset)
-                let cellWidth = (self.bounds.width - max(0, cellsPerRow - 1) * horizontalSpacing - sectionInset * 2) / cellsPerRow
+                let cellWidth = (self.bounds.width - max(0, cellsPerRow - 1) * horizontalSpacing - sectionInset * 2.5 - CGFloat(1)) / cellsPerRow
                 flowLayout.itemSize = CGSize(width: cellWidth, height: cellWidth)
+//                print(self.bounds.width >= (max(0, cellsPerRow - 1) * horizontalSpacing + sectionInset * 2 + cellWidth * cellsPerRow))
             }
         }
     }
@@ -41,10 +42,10 @@ class AvatarCollectionView: UICollectionView {
 //        super.awakeFromNib()
 //        customizedView()
 //    }
-
-//    override func prepareForInterfaceBuilder() {
-//        super.prepareForInterfaceBuilder()
-//        customizedView()
-//    }
+//
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        customizedView()
+    }
     
 }
